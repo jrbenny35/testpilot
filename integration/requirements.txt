@@ -1,3 +1,3 @@
 marionette-client==3.3.0
-firefox-puppeteer==52.0.0
+firefox-puppeteer==52.1.0
 mozlog==3.3
