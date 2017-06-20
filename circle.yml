@@ -19,9 +19,6 @@ dependencies:
     - "addon/node_modules"
     # node_modules is included by default
 
-  pre:
-    - curl -fsSL https://git.io/v2Ifn | bash
-
   override:
     - pip install tox mozdownload mozinstall
     - google-chrome --version
@@ -40,7 +37,9 @@ test:
   override:
     - ./bin/circleci/test-addon.sh
     - ./bin/circleci/test-frontend.sh
-    - circleci-matrix
+    - sh ./bin/circleci/test-firefox-release.sh
+    - sh ./bin/circleci/test-firefox-dev.sh
+    - sh ./bin/circleci/test-firefox-nightly.sh
   post:
     - bash <(curl -s https://codecov.io/bash)
 

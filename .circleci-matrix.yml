@@ -1,8 +1,0 @@
-env:
-    - FIREFOX=latest FF_PATH=firefox.tar.bz2
-    - FIREFOX=latest-beta, FF_PATH=firefox.tar.bz2
-    - FIREFOX=latest --type daily, FF_PATH=firefox.tar.bz2
-
-command:
-    - ./bin/circleci/download-firefox.sh
-    - tox
