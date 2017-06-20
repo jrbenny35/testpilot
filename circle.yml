@@ -18,7 +18,6 @@ dependencies:
   cache_directories:
     - "addon/node_modules"
     # node_modules is included by default
-
   override:
     - pip install tox mozdownload mozinstall
     - google-chrome --version
