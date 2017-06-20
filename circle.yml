@@ -37,12 +37,8 @@ test:
   override:
     - ./bin/circleci/test-addon.sh
     - ./bin/circleci/test-frontend.sh
-    - Integration-Test:
-          parallel: True
-          files:
-          - ./bin/circleci/test-firefox-release.sh
-          - ./bin/circleci/test-firefox-dev.sh
-          - ./bin/circleci/test-firefox-nightly.sh
+    - case $CIRCLE_NODE_INDEX in 0) sh ./bin/circleci/test-firefox-release.sh ;; 1) sh ./bin/circleci/test-firefox-dev.sh ;; 2) sh ./bin/circleci/test-firefox-nightly.sh ;; esac:
+        parallel: true
   post:
     - bash <(curl -s https://codecov.io/bash)
 
