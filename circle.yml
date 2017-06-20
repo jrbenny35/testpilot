@@ -25,13 +25,13 @@ dependencies:
     - ./bin/circleci/build-addon.sh
     - ./bin/circleci/build-version-json.sh
     - ./bin/circleci/build-frontend.sh
-
-test:
-  pre:
     - curl -L -o geckodriver.tar.gz `curl -s 'https://api.github.com/repos/mozilla/geckodriver/releases/latest' | python -c "import sys, json; r = json.load(sys.stdin); print([a for a in r['assets'] if 'linux64' in a['name']][0]['browser_download_url']);"`
     - gunzip -c geckodriver.tar.gz | tar xopf -
     - chmod +x geckodriver
     - sudo mv geckodriver /home/ubuntu/bin
+
+test:
+  pre:
     - geckodriver --version
   override:
     - ./bin/circleci/test-addon.sh
