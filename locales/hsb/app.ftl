@@ -17,6 +17,7 @@ footerLinkCookies = Placki
 footerLinkPrivacy = Priwatnosć
 footerLinkTerms = Wužiwarske wuměnjenja
 footerLinkLegal = Prawniske
+footerLinkFeedback = Komentar pósłać
 footerLinkAbout = Wo Test Pilot
 
 
@@ -29,6 +30,7 @@ menuWiki = Wiki Test Pilot
 menuDiscuss = Wo Test Pilot diskutować
 menuFileIssue = Problem zdźělić
 menuRetire = Test Pilot wotinstalować
+headerLinkBlog = Blog
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = Ow ně!
 [[ updateList ]]
 
 latestUpdatesTitle = Najnowše aktualizacije
+showMoreNewsTitle = Zańdźene nowinki pokazać
 
 
 // A listing of all Test Pilot experiments.
@@ -156,7 +159,6 @@ experimentPromoSubheader = Wuwiwamy funkcije přichodneje generacije za Firefox.
 
 isEnabledStatusMessage = { $title } je zmóžnjeny.
 installErrorMessage = Ow, ow. { $title } njeda so zmóžnić. Spytajće pozdźišo hišće raz.
-participantCount = <span>{ $installation_count }</span> wobdźělnikow
 otherExperiments = Wobhladajće sej tež slědowace eksperimenty
 giveFeedback = Prajće swoje měnjenje
 disableHeader = Eksperiment znjemóžnić?
@@ -170,20 +172,29 @@ measurements = Waša priwatnosć
 experimentPrivacyNotice = Móžeće tu wjace wo zběranju datow za { $title } zhonić.
 contributorsHeading = Prezentowany wot
 contributorsExtraLearnMore = Dalše informacije
-changelog = protokol změnow
+changelog = Protokol změnow
 tour = Tura
-tourLink = tura
+tourLink = Tura
 contribute = Sobu skutkować
 bugReports = Rozprawy wo programowych zmylkach
 discussExperiment = Wo { $title } diskutować
 tourOnboardingTitle = { $title } zmóžnjeny!
 tourDoneButton = Hotowo
-userCountContainer = <span>{ $installation_count }</span> wosobow runje { $title } wupruwuje!
 userCountContainerAlt = Runje startowany!
 highlightPrivacy = Waša priwatnosć
+experimentGradReportButton = Kónčna rozprawa
 experimentGradReportPendingTitle = Tutón eksperiment je skónčeny
 experimentGradReportPendingCopy = Dźěłamy na wobšěrnej rozprawje. Hladajće bórze za podrobnosćemi.
+experimentGradReportReady = Smy dospołnu kónčnu rozprawo přihotowali.
 experimentGoToLink = K { $title }
+startedDateLabel = Spočatny datum eksperimenta: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Test Pilot
+learnMoreLink = DALŠE INFORMACIJE
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -211,7 +222,7 @@ versionChangeNoticeLink = Wobstarajće sej aktualnu wersiju Firefox.
 [[ uninstall ]]
 
 retireDialogTitle = Test Pilot wotinstalować?
-retireMessage = Cyle kaž přejeće. To znjemóžni aktiwne testy, wotinstaluje přidatk a wotstroni waše kontowe informacije z našich serwerow.
+retireMessageUpdate = Kaž seh přejeće. To budźe Test Pilot wotinstalować. Móžeće jednotliwe eksperimenty ze zrjadowaka rozšěrenjow přidatkow znjemóžnić.
 retireEmailMessage = Klikńće prosće na wotkaz <em>Wotskazać</em> w e-mejlce Test Pilot, zo njebyšće žane nowinki wjace dóstał.
 retireSubmitButton = Dale
 pageTitleRetirePage = Firefox Test Pilot - Test Pilot wotinstalować
@@ -276,7 +287,7 @@ newsletterFooterSuccessBody = Jeli hišće njejsće abonement powěsćoweho list
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Tutón eksperiment so we wašej rěči njepodpěruje ({ $locale_code }).
+localeNotTranslatedWarningTitle = Tutón eksperiment njeje so do wašeje rěče ({ $locale_code }) přełožił.
 localeWarningSubtitle = Móžeće jón najebać to zmóžnić, jeli chceće.
 
 

@@ -17,6 +17,7 @@ footerLinkCookies = Cookies
 footerLinkPrivacy = Απόρρητο
 footerLinkTerms = Όροι
 footerLinkLegal = Νομικά
+footerLinkFeedback = Αποστολή σχολίων
 footerLinkAbout = Σχετικά με το Test Pilot
 
 
@@ -29,6 +30,7 @@ menuWiki = Test Pilot Wiki
 menuDiscuss = Συζήτηση για το Test Pilot
 menuFileIssue = Αναφορά ζητήματος
 menuRetire = Απεγκατάσταση του Test Pilot
+headerLinkBlog = Ιστολόγιο
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = Ωχ όχι!
 [[ updateList ]]
 
 latestUpdatesTitle = Τελευταίες ενημερώσεις
+showMoreNewsTitle = Εμφάνιση προηγούμενων ειδήσεων
 
 
 // A listing of all Test Pilot experiments.
@@ -159,7 +162,6 @@ experimentPromoSubheader = Αναπτύσσουμε καινοτόμες λει�
 
 isEnabledStatusMessage = Το { $title } ενεργοποιήθηκε.
 installErrorMessage = Ωχ ωχ. Αδυναμία ενεργοποίησης του { $title }. Δοκιμάστε ξανά αργότερα.
-participantCount = <span>{ $installation_count }</span> συμμετέχοντες
 otherExperiments = Δοκιμάστε κι αυτά τα πειράματα
 giveFeedback = Υποβολή σχολίων
 disableHeader = Απενεργοποίηση πειράματος;
@@ -181,12 +183,13 @@ bugReports = Αναφορές σφαλμάτων
 discussExperiment = Συζήτηση για το { $title }
 tourOnboardingTitle = Το { $title } ενεργοποιήθηκε!
 tourDoneButton = Τέλος
-userCountContainer = Υπάρχουν <span>{ $installation_count }</span> άτομα που δοκιμάζουν το { $title } αυτή τη στιγμή!
 userCountContainerAlt = Μόλις ξεκίνησε!
 highlightPrivacy = Το απόρρητό σας
+experimentGradReportButton = Αναφορά αποφοίτησης
 experimentGradReportPendingTitle = Αυτό το πείραμα έχει λήξει
 experimentGradReportPendingCopy = Εργαζόμαστε πάνω σε μια πλήρη αναφορά. Ελέγξτε ξανά σύντομα για λεπτομέρειες.
 experimentGoToLink = Μετάβαση στο { $title }
+startedDateLabel = Ημερομηνία έναρξης πειράματος: <b>{ $startedDate }</b>
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -214,7 +217,6 @@ versionChangeNoticeLink = Λάβετε την τρέχουσα έκδοση το
 [[ uninstall ]]
 
 retireDialogTitle = Απεγκατάσταση του Test Pilot;
-retireMessage = Όπως επιθυμείτε. Αυτό θα απενεργοποιήσει κάθε ενεργή δοκιμή, θα απεγκαταστήσει το πρόσθετο και θα αφαιρέσει τις πληροφορίες του λογαριασμού σας από τους διακομιστές μας.
 retireEmailMessage = Για να απενεργοποιήσετε τις ενημερώσεις μέσω e-mail, κάντε απλά κλικ στο σύνδεσμο <em>κατάργησης εγγραφής</em> σε οποιοδήποτε e-mail από το Test Pilot.
 retireSubmitButton = Συνέχεια
 pageTitleRetirePage = Firefox Test Pilot - Απεγκατάσταση του Test Pilot
@@ -279,7 +281,6 @@ newsletterFooterSuccessBody = Αν δεν έχετε επιβεβαιώσει π
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Αυτό το πείραμα δεν υποστηρίζεται στη γλώσσα σας: ({ $locale_code }).
 localeWarningSubtitle = Μπορείτε ακόμη να το ενεργοποιήσετε αν θέλετε.
 
 

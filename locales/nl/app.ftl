@@ -17,6 +17,7 @@ footerLinkCookies = Cookies
 footerLinkPrivacy = Privacy
 footerLinkTerms = Voorwaarden
 footerLinkLegal = Juridisch
+footerLinkFeedback = Feedback geven
 footerLinkAbout = Over Test Pilot
 
 
@@ -29,6 +30,7 @@ menuWiki = Test Pilot-wiki
 menuDiscuss = Test Pilot bespreken
 menuFileIssue = Een probleem melden
 menuRetire = Test Pilot verwijderen
+headerLinkBlog = Blog
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = O nee!
 [[ updateList ]]
 
 latestUpdatesTitle = Nieuwste updates
+showMoreNewsTitle = Eerder nieuws tonen
 
 
 // A listing of all Test Pilot experiments.
@@ -159,7 +162,6 @@ experimentPromoSubheader = We bouwen functies van de volgende generatie voor Fir
 
 isEnabledStatusMessage = { $title } is ingeschakeld.
 installErrorMessage = O, o. { $title } kon niet worden ingeschakeld. Probeer het later opnieuw.
-participantCount = <span>{ $installation_count }</span> deelnemers
 otherExperiments = Probeer ook deze experimenten
 giveFeedback = Geef feedback
 disableHeader = Experiment uitschakelen?
@@ -181,12 +183,21 @@ bugReports = Bugrapporten
 discussExperiment = Discussiëren over { $title }
 tourOnboardingTitle = { $title } ingeschakeld!
 tourDoneButton = Gereed
-userCountContainer = <span>{ $installation_count }</span> mensen proberen { $title } op dit moment uit!
 userCountContainerAlt = Zojuist gestart!
 highlightPrivacy = Uw privacy
+experimentGradReportButton = Eindrapport
 experimentGradReportPendingTitle = Dit experiment is beëindigd
 experimentGradReportPendingCopy = We werken aan een volledig rapport. Kijk binnenkort nog eens voor de details.
+experimentGradReportReady = We hebben een volledig eindrapport opgesteld.
 experimentGoToLink = Naar { $title }
+startedDateLabel = Begindatum van experiment: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Test Pilot
+learnMoreLink = MEER INFO
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -214,7 +225,7 @@ versionChangeNoticeLink = Download de huidige versie van Firefox.
 [[ uninstall ]]
 
 retireDialogTitle = Test Pilot verwijderen?
-retireMessage = Zoals u wilt. Hierdoor worden alle actieve tests uitgeschakeld, de add-on gede-installeerd en uw accountgegevens van onze servers verwijderd.
+retireMessageUpdate = Zoals u wilt. Hierdoor wordt Test Pilot gede-installeerd. U kunt individuele experimenten uitschakelen in de Add-onbeheerder van Firefox.
 retireEmailMessage = Om u van updates per e-mail uit te schrijven, klikt u eenvoudig op de koppeling <em>uitschrijven</em> in een willekeurige Test Pilot-e-mail.
 retireSubmitButton = Doorgaan
 pageTitleRetirePage = Firefox Test Pilot - Test Pilot de-installeren
@@ -279,7 +290,7 @@ newsletterFooterSuccessBody = Als u nog niet eerder een inschrijving voor een Mo
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Dit experiment wordt niet ondersteund in uw taal ({ $locale_code }).
+localeNotTranslatedWarningTitle = Dit experiment is niet vertaald naar uw taal ({ $locale_code }).
 localeWarningSubtitle = U kunt het echter inschakelen als u wilt.
 
 

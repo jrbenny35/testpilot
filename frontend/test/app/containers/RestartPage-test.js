@@ -2,6 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
+import { findLocalizedById } from '../util';
 
 import Restart from '../../../src/app/containers/RestartPage';
 
@@ -18,9 +19,7 @@ describe('app/containers/RestartPage', () => {
     subject = shallow(<Restart {...props} />);
   });
 
-  const findByL10nID = id => subject.findWhere(el => id === el.props()['data-l10n-id']);
-
-  it('should ping GA on componment mount', () => {
+  it('should ping GA on component mount', () => {
     const mountedProps = { ...props };
     const mountedSubject = mount(<Restart {...mountedProps} />);
     expect(props.sendToGA.lastCall.args).to.deep.equal(['event', {
@@ -29,11 +28,10 @@ describe('app/containers/RestartPage', () => {
       eventLabel: 'restart required'
     }]);
   });
-
   it('should display restart instructions', () => {
-    expect(findByL10nID('restartIntroLead')).to.have.property('length', 1);
-    expect(findByL10nID('restartIntroOne')).to.have.property('length', 1);
-    expect(findByL10nID('restartIntroTwo')).to.have.property('length', 1);
-    expect(findByL10nID('restartIntroThree')).to.have.property('length', 1);
+    expect(findLocalizedById(subject, 'restartIntroLead')).to.have.property('length', 1);
+    expect(findLocalizedById(subject, 'restartIntroOne')).to.have.property('length', 1);
+    expect(findLocalizedById(subject, 'restartIntroTwo')).to.have.property('length', 1);
+    expect(findLocalizedById(subject, 'restartIntroThree')).to.have.property('length', 1);
   });
 });

@@ -17,6 +17,7 @@ footerLinkCookies = Cookies
 footerLinkPrivacy = 隱私權
 footerLinkTerms = 使用條款
 footerLinkLegal = 法律
+footerLinkFeedback = 提供意見回饋
 footerLinkAbout = 關於 Test Pilot
 
 
@@ -29,6 +30,7 @@ menuWiki = Test Pilot Wiki
 menuDiscuss = 討論 Test Pilot
 menuFileIssue = 回報問題
 menuRetire = 移除 Test Pilot
+headerLinkBlog = 部落格
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = 糟糕！
 [[ updateList ]]
 
 latestUpdatesTitle = 最新消息
+showMoreNewsTitle = 顯示過去新聞
 
 
 // A listing of all Test Pilot experiments.
@@ -156,7 +159,6 @@ experimentPromoSubheader = 我們正在開發 Firefox 的下一代新功能，�
 
 isEnabledStatusMessage = 已開啟 { $title }。
 installErrorMessage = 唉呀，無法開啟 { $title }。請稍候再試試看。
-participantCount = <span>{ $installation_count }</span> 位參與者
 otherExperiments = 也試試這些實驗
 giveFeedback = 提供意見回饋
 disableHeader = 要關閉實驗嗎？
@@ -178,12 +180,21 @@ bugReports = 錯誤回報
 discussExperiment = 討論 { $title }
 tourOnboardingTitle = 已開啟 { $title }！
 tourDoneButton = 完成
-userCountContainer = 已經有 <span>{ $installation_count }</span> 個人正在試用 { $title }！
 userCountContainerAlt = 剛推出！
 highlightPrivacy = 您的隱私權
+experimentGradReportButton = 畢業成績單
 experimentGradReportPendingTitle = 此實驗已經結束
 experimentGradReportPendingCopy = 我們正在撰寫實驗報告，請稍後再回來瞭解報告詳情。
+experimentGradReportReady = 我們準備了一份完整的畢業成績單。
 experimentGoToLink = 前往 { $title }
+startedDateLabel = 實驗開始日期: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Test Pilot
+learnMoreLink = 了解更多
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -211,7 +222,7 @@ versionChangeNoticeLink = 下載最新版 Firefox。
 [[ uninstall ]]
 
 retireDialogTitle = 要移除 Test Pilot 嗎？
-retireMessage = 如您所願。將會停用所有進行中的測試、移除附加元件，並移除我們的伺服器上關於您的帳號資訊。
+retireMessageUpdate = 如您所願，將移除 Test Pilot。您可在 Firefox 的附加元件管理員中停用各個實驗。
 retireEmailMessage = 要停止收到電子報，只要點擊每封信當中的 <em>取消訂閱</em> 鏈結。
 retireSubmitButton = 繼續
 pageTitleRetirePage = Firefox Test Pilot - 移除 Test Pilot
@@ -276,7 +287,7 @@ newsletterFooterSuccessBody = 若您先前沒有確認訂閱任何 Mozilla 電�
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = 此實驗不支援您的語言（{ $locale_code }）。
+localeNotTranslatedWarningTitle = 此實驗尚未翻譯成您的語言（{ $locale_code }）。
 localeWarningSubtitle = 您想要的話還是可以安裝。
 
 

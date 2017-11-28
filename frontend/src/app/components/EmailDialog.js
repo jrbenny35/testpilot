@@ -1,6 +1,7 @@
 // @flow
-
+import { Localized } from 'fluent-react/compat';
 import React from 'react';
+
 import NewsletterForm from './NewsletterForm';
 import { subscribeToBasket } from '../lib/utils';
 
@@ -21,6 +22,8 @@ export default class EmailDialog extends React.Component {
   props: EmailDialogProps
   state: EmailDialogState
 
+  modalContainer: Object
+
   constructor(props: EmailDialogProps) {
     super(props);
     this.state = {
@@ -31,11 +34,19 @@ export default class EmailDialog extends React.Component {
     };
   }
 
+  componentDidMount() {
+    if (this.modalContainer !== undefined) {
+      this.modalContainer.focus();
+    }
+  }
+
   render() {
     const { isSuccess, isError } = this.state;
 
     return (
-      <div className="modal-container">
+      <div className="modal-container" tabIndex="0"
+           ref={modalContainer => { this.modalContainer = modalContainer; }}
+           onKeyDown={e => this.handleKeyDown(e)}>
         {!isSuccess && !isError && this.renderForm()}
         {isSuccess && this.renderSuccess()}
         {isError && this.renderError()}
@@ -49,11 +60,15 @@ export default class EmailDialog extends React.Component {
     return (
       <div id="first-page" className="modal feedback-modal modal-bounce-in">
         <header className="modal-header-wrapper">
-          <h3 className="modal-header" data-l10n-id="emailOptInDialogTitle">Welcome to Test Pilot!</h3>
+          <Localized id="emailOptInDialogTitle">
+            <h3 className="modal-header">Welcome to Test Pilot!</h3>
+          </Localized>
           <div className="modal-cancel" onClick={e => this.skip(e)}/>
         </header>
         <div className="modal-content centered">
-          <p data-l10n-id="emailOptInMessage" className="">Find out about new experiments and see test results for experiments you&apos;ve tried.</p>
+          <Localized id="emailOptInMessage">
+            <p>Find out about new experiments and see test results for experiments you&apos;ve tried.</p>
+          </Localized>
           <NewsletterForm {...{ email, privacy }}
                           isModal={true}
                           setEmail={newEmail => this.setState({ email: newEmail })}
@@ -68,15 +83,21 @@ export default class EmailDialog extends React.Component {
     return (
       <div id="second-page" className="modal">
         <header className="modal-header-wrapper">
-          <h3 className="modal-header" data-l10n-id="newsletterFooterSuccessHeader">Thanks!</h3>
+          <Localized id="newsletterFooterSuccessHeader">
+            <h3 className="modal-header">Thanks!</h3>
+          </Localized>
           <div className="modal-cancel" onClick={e => this.continue(e)} />
         </header>
         <div className="modal-content centered">
           <div className="envelope" />
-          <p data-l10n-id="newsletterFooterSuccessBody" />
+          <Localized id="newsletterFooterSuccessBody">
+            <p>Thank you!</p>
+          </Localized>
         </div>
         <div className="modal-actions">
-          <button id="email-success-continue" onClick={e => this.continue(e)} className="button default large" data-l10n-id="emailOptInConfirmationClose">On to the experiments...</button>
+          <Localized id="emailOptInConfirmationClose">
+            <button id="email-success-continue" onClick={e => this.continue(e)} className="button default large">On to the experiments&hellip;</button>
+          </Localized>
         </div>
       </div>
     );
@@ -86,17 +107,23 @@ export default class EmailDialog extends React.Component {
     return (
       <div id="second-page" className="modal">
         <header className="modal-header-wrapper">
-          <h3 className="modal-header" data-l10n-id="emailOptInDialogErrorTitle">Oh no!</h3>
+          <Localized id="emailOptInDialogErrorTitle">
+            <h3 className="modal-header">Oh no!</h3>
+          </Localized>
           <div className="modal-cancel" onClick={e => this.continue(e)} />
         </header>
         <div className="modal-content centered">
           <div className="envelope" />
-          <p className="error" data-l10n-id="newsletterFooterError">
-            There was an error submitting your email address. Try again?
-          </p>
+          <Localized id="newsletterFooterError">
+            <p className="error">
+              There was an error submitting your email address. Try again?
+            </p>
+          </Localized>
         </div>
         <div className="modal-actions">
-          <button id="email-success-continue" onClick={e => this.reset(e)} className="button default large" data-l10n-id="newsletterFormSubmitButton">Sign Up Now</button>
+          <Localized id="newsletterFormSubmitButton">
+            <button id="email-success-continue" onClick={e => this.reset(e)} className="button default large">Sign Up Now</button>
+          </Localized>
         </div>
       </div>
     );
@@ -170,6 +197,42 @@ export default class EmailDialog extends React.Component {
 
   close() {
     if (this.props.onDismiss) { this.props.onDismiss(); }
+  }
+
+  handleKeyDown(e: Object) {
+    const { isSuccess, isError } = this.state;
+    switch (e.key) {
+      case 'Escape':
+        if (!isSuccess && !isError) {
+          this.skip(e);
+        } else if (isSuccess) {
+          this.continue(e);
+        } else if (isError) {
+          this.continue(e);
+        }
+        break;
+      case 'Enter':
+        if (!isSuccess && !isError) {
+          // If event is bubbled up from the input form,
+          // do nothing and let the HTML form handle it.
+          if (e.target !== e.currentTarget) {
+            return;
+          }
+          // Submit only if privacy checkbox is checked.
+          if (this.state.privacy) {
+            this.handleSubscribe(this.state.email);
+          }
+          // TODO: Else, show notification that the checkbox
+          // needs to be checked to proceed.
+        } else if (isSuccess) {
+          this.continue(e);
+        } else if (isError) {
+          this.reset(e);
+        }
+        break;
+      default:
+        break;
+    }
   }
 
 }

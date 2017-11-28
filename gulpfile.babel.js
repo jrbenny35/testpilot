@@ -1,4 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies*/
+require('babel-polyfill');
+
+// HACK: Ignore non-JS imports used for asset dependencies in Webpack
+require.extensions['.scss'] = () => {};
+
 const gulp = require('gulp');
 const config = require('./frontend/config.js');
 
@@ -18,8 +23,6 @@ require('./frontend/tasks/pages');
 require('./frontend/tasks/server');
 require('./frontend/tasks/dist');
 
-require('./addon/tasks/locales');
-
 gulp.task('clean', () => del([
   config.DEST_PATH,
   config.DIST_PATH
@@ -34,7 +37,6 @@ gulp.task('distclean', () => del([
 
 gulp.task('build', done => runSequence(
   'content-build',
-  'addon-copy-locales',
   'scripts-build',
   'styles-build',
   'images-build',
@@ -46,7 +48,6 @@ gulp.task('build', done => runSequence(
 gulp.task('watch', [
   'self-watch',
   'content-watch',
-  'addon-watch-locales',
   'scripts-watch',
   'styles-watch',
   'images-watch',
@@ -58,20 +59,21 @@ gulp.task('default', done => runSequence(
   'self-lint',
   'clean',
   'build',
-  'watch',
   'server',
+  'watch',
   done
 ));
 
 // Exit if the gulpfile changes so we can self-reload with a wrapper script.
 gulp.task('self-watch', () => gulp.watch([
   './gulpfile.babel.js',
+  './webpack.config.js',
   './frontend/config.js',
   './debug-config.json',
   './frontend/tasks/*.js'
 ], () => process.exit()));
 
-gulp.task('self-lint', () => gulp.src('gulpfile.babel.js')
+gulp.task('self-lint', () => gulp.src(['gulpfile.babel.js', 'webpack.config.js'])
   .pipe(eslint())
   .pipe(eslint.format())
   .pipe(eslint.failOnError()));

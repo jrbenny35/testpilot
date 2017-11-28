@@ -15,8 +15,9 @@ pageTitleExperiment = Firefox Test Pilot - { $title }
 
 footerLinkCookies = Cookie
 footerLinkPrivacy = Privacy
-footerLinkTerms = Condizioni d'uso
+footerLinkTerms = Condizioni di utilizzo
 footerLinkLegal = Note legali
+footerLinkFeedback = Dacci la tua opinione
 footerLinkAbout = Informazioni su Test Pilot
 
 
@@ -26,9 +27,10 @@ footerLinkAbout = Informazioni su Test Pilot
 home = Pagina iniziale
 menuTitle = Impostazioni
 menuWiki = Wiki di Test Pilot
-menuDiscuss = Discuti di Test Pilot
+menuDiscuss = Discussioni su Test Pilot
 menuFileIssue = Segnala un problema
 menuRetire = Disinstalla Test Pilot
+headerLinkBlog = Blog
 
 
 // The splash on the homepage.
@@ -44,7 +46,7 @@ landingExperimentsTitle = Prova gli esperimenti più recenti
 // Related to the installation of the Test Pilot add-on.
 [[ landingInstall ]]
 
-landingInstallButton = Installa l’estensione Test Pilot
+landingInstallButton = Installa l’estensione di Test Pilot
 landingInstallingButton = Installazione in corso…
 landingInstalledButton = Scegli i tuoi esperimenti
 
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = Accidenti!
 [[ updateList ]]
 
 latestUpdatesTitle = Ultime notizie
+showMoreNewsTitle = Visualizza notizie più vecchie
 
 
 // A listing of all Test Pilot experiments.
@@ -113,7 +116,7 @@ latestUpdatesTitle = Ultime notizie
 experimentListEnabledTab = Attivo
 experimentListJustLaunchedTab = Appena lanciato
 experimentListJustUpdatedTab = Appena aggiornato
-experimentListEndingTomorrow = Si conclude domani
+experimentListEndingTomorrow = Si concluderà domani
 experimentListEndingSoon = Si concluderà a breve
 experimentCondensedHeader = Benvenuto in Test Pilot
 experimentListHeader = Scegli i tuoi esperimenti
@@ -156,7 +159,6 @@ experimentPromoSubheader = Stiamo realizzando funzioni di ultima generazione per
 
 isEnabledStatusMessage = { $title } è attivo.
 installErrorMessage = Oops. Non è stato possibile attivare { $title }. Riprova più tardi.
-participantCount = <span>{ $installation_count }</span> partecipanti
 otherExperiments = Prova anche questi esperimenti
 giveFeedback = Dacci la tua opinione
 disableHeader = Disattivare l’esperimento?
@@ -175,15 +177,24 @@ tour = Panoramica
 tourLink = Panoramica
 contribute = Collabora
 bugReports = Segnalazione bug
-discussExperiment = Discuti di { $title }
+discussExperiment = Discussioni su { $title }
 tourOnboardingTitle = { $title } attivato.
 tourDoneButton = Fatto
-userCountContainer = In questo momento <span>{ $installation_count }</span> persone stanno provando { $title }.
 userCountContainerAlt = Appena lanciato
 highlightPrivacy = La tua privacy
+experimentGradReportButton = Rapporto conclusivo
 experimentGradReportPendingTitle = Questo esperimento si è concluso
 experimentGradReportPendingCopy = Stiamo preparando il rapporto conclusivo con i risultati di questo esperimento. Torna a trovarci per tutti i dettagli.
+experimentGradReportReady = Abbiamo preparato un rapporto conclusivo completo.
 experimentGoToLink = Vai a { $title }
+startedDateLabel = Data di inizio esperimento: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Test Pilot
+learnMoreLink = ULTERIORI INFORMAZIONI
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -211,7 +222,7 @@ versionChangeNoticeLink = Scarica l’ultima versione di Firefox.
 [[ uninstall ]]
 
 retireDialogTitle = Disinstallare Test Pilot?
-retireMessage = Come desideri. Gli esperimenti attivi verranno disattivati, il componente aggiuntivo sarà rimosso e le informazioni sul tuo account verranno eliminate dal server.
+retireMessageUpdate = Come desideri: Test Pilot verrà disinstallato, mentre i singoli esperimenti possono essere disattivati dal gestore componenti aggiuntivi di Firefox.
 retireEmailMessage = Per non ricevere più aggiornamenti via email fai clic sul link <em>annulla iscrizione</em> presente in tutte le email inviate da Test Pilot.
 retireSubmitButton = Continua
 pageTitleRetirePage = Firefox Test Pilot - Disinstallazione di Test Pilot
@@ -276,7 +287,7 @@ newsletterFooterSuccessBody = Se non hai mai confermato prima d’ora l’iscriz
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Questo esperimento non è disponibile nella tua lingua ({ $locale_code }).
+localeNotTranslatedWarningTitle = Questo esperimento non è stato ancora tradotto nella tua lingua ({ $locale_code }).
 localeWarningSubtitle = Se lo desideri è comunque possibile attivarlo.
 
 

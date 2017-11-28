@@ -17,6 +17,7 @@ footerLinkCookies = Cookie
 footerLinkPrivacy = 隐私
 footerLinkTerms = 条款
 footerLinkLegal = 法律
+footerLinkFeedback = 提供反馈
 footerLinkAbout = 关于 Test Pilot
 
 
@@ -29,6 +30,7 @@ menuWiki = Test Pilot Wiki
 menuDiscuss = 讨论 Test Pilot
 menuFileIssue = 填报问题
 menuRetire = 卸载 Test Pilot
+headerLinkBlog = 博客
 
 
 // The splash on the homepage.
@@ -88,7 +90,7 @@ onboardingMessage = 我们会在您的工具栏放一个图标，以便您回到
 
 errorHeading = 啊呀！
 errorMessage = 这里好像坏掉了。<br>可以待会再试试。
-notFoundHeader = 找不到呢！
+notFoundHeader = 到了什么都没有的太空！
 
 
 // A modal prompt to sign up for the Test Pilot newsletter.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = 很遗憾
 [[ updateList ]]
 
 latestUpdatesTitle = 最新更新
+showMoreNewsTitle = 显示过去的新闻
 
 
 // A listing of all Test Pilot experiments.
@@ -156,7 +159,6 @@ experimentPromoSubheader = 我们正在为下一代的 Firefox 打造新功能�
 
 isEnabledStatusMessage = { $title } 已启用。
 installErrorMessage = 啊。{ $title } 未能启用。请稍候重试。
-participantCount = <span>{ $installation_count }</span> 人已参与
 otherExperiments = 也试试这些实验吧
 giveFeedback = 提供反馈
 disableHeader = 禁用实验？
@@ -178,12 +180,21 @@ bugReports = 缺陷报告
 discussExperiment = 讨论 { $title }
 tourOnboardingTitle = { $title } 已启用！
 tourDoneButton = 完成
-userCountContainer = 已有 <span>{ $installation_count }</span> 人次尝试过 { $title }！
 userCountContainerAlt = 刚刚启动！
 highlightPrivacy = 您的隐私
+experimentGradReportButton = 毕业报告
 experimentGradReportPendingTitle = 此实验已经结束
 experimentGradReportPendingCopy = 我们正在制作完整报告。请过段时间再回来了解详细信息。
+experimentGradReportReady = 我们准备了一份完整的毕业报告。
 experimentGoToLink = 前往 { $title }
+startedDateLabel = 实验开始时间：<b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Test Pilot
+learnMoreLink = 详细了解
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -211,7 +222,7 @@ versionChangeNoticeLink = 获取最新 Firefox 版本。
 [[ uninstall ]]
 
 retireDialogTitle = 卸载 Test Pilot？
-retireMessage = 如您所愿。这将禁用所有已激活的测试，卸载该附加组件，以及从我们的服务器上移除您的账户信息。
+retireMessageUpdate = 如您所愿。这将卸载 Test Pilot。您可以在 Firefox 的附加组件管理器中禁用各个实验。
 retireEmailMessage = 要停用电子邮件更新，只需点击任何 Test Pilot 邮件中的<em>退订</em>链接。
 retireSubmitButton = 继续
 pageTitleRetirePage = Firefox Test Pilot - 卸载 Test Pilot
@@ -276,7 +287,7 @@ newsletterFooterSuccessBody = 如果您以前没有确认过订阅 Mozilla 相�
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = 此实验尚不支持您的语言 ({ $locale_code })。
+localeNotTranslatedWarningTitle = 此实验未翻译为您的语言 ({ $locale_code })。
 localeWarningSubtitle = 如果您不介意，无妨启用它。
 
 

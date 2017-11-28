@@ -17,6 +17,7 @@ footerLinkCookies = Sütik
 footerLinkPrivacy = Adatvédelem
 footerLinkTerms = Feltételek
 footerLinkLegal = Jogi információk
+footerLinkFeedback = Adjon visszajelzést
 footerLinkAbout = A Tesztpilóta névjegye
 
 
@@ -29,6 +30,7 @@ menuWiki = Tesztpilóta Wiki
 menuDiscuss = A Tesztpilóta megvitatása
 menuFileIssue = Probléma jelentése
 menuRetire = A Tesztpilóta eltávolítása
+headerLinkBlog = Blog
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = Jaj ne!
 [[ updateList ]]
 
 latestUpdatesTitle = Legújabb frissítések
+showMoreNewsTitle = Múltbeli hírek megjelenítése
 
 
 // A listing of all Test Pilot experiments.
@@ -159,7 +162,6 @@ experimentPromoSubheader = A Firefox következő generációs funkcióit készí
 
 isEnabledStatusMessage = { $title } bekapcsolva.
 installErrorMessage = O-ó. A(z) { $title } nem kapcsolható be. Próbálkozzon később.
-participantCount = <span>{ $installation_count }</span> résztvevő
 otherExperiments = Próbálja ki ezeket a kísérleteket is
 giveFeedback = Adjon visszajelzést
 disableHeader = Kikapcsolja a kísérletet?
@@ -173,20 +175,29 @@ measurements = Magánszféra
 experimentPrivacyNotice = Itt többet tudhat meg a(z) { $title } adatgyűjtéséről.
 contributorsHeading = Nekik köszönhetően:
 contributorsExtraLearnMore = Tudjon meg többet
-changelog = változások listája
+changelog = Változások listája
 tour = Kalauz
-tourLink = kalauz
+tourLink = Kalauz indítása
 contribute = Közreműködés
 bugReports = Hibajelentések
 discussExperiment = A(z) { $title } megvitatása
 tourOnboardingTitle = { $title } bekapcsolva!
 tourDoneButton = Kész
-userCountContainer = Jelenleg <span>{ $installation_count }</span> ember próbálja ezt ki: { $title }.
 userCountContainerAlt = Épp most indult!
 highlightPrivacy = Magánszféra
+experimentGradReportButton = Kísérlet befejezési jelentés
 experimentGradReportPendingTitle = Ez a kísérlet véget ért
 experimentGradReportPendingCopy = A teljes jelentésen dolgozunk. Nézzen vissza hamarosan a részletekért.
+experimentGradReportReady = Egy teljes zárójelentést készítettünk.
 experimentGoToLink = Ugrás ide: { $title }
+startedDateLabel = Kísérlet kezdő dátuma: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Tesztpilóta
+learnMoreLink = TOVÁBBI INFORMÁCIÓK
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -214,7 +225,7 @@ versionChangeNoticeLink = A Firefox jelenlegi verziójának beszerzése.
 [[ uninstall ]]
 
 retireDialogTitle = Eltávolítja a Tesztpilótát?
-retireMessage = Ahogy kívánja. Ez kikapcsol minden aktív tesztet, eltávolítja a kiegészítőt és eltávolítja a fiókinformációit a kiszolgálóinkról.
+retireMessageUpdate = Ahogy kívánja. Ez eltávolítja a Tesztpilótát. Az egyes kísérleteket a Firefox kiegészítőkezelőben is letilthatja.
 retireEmailMessage = Hogy kiszálljon az e-mail értesítésekből, egyszerűen kattintson a <em>leiratkozás</em> hivatkozásra bármelyik Tesztpilóta e-mailben.
 retireSubmitButton = Folytatás
 pageTitleRetirePage = Firefox Tesztpilóta – A Tesztpilóta eltávolítása
@@ -279,7 +290,7 @@ newsletterFooterSuccessBody = Ha korábban nem erősítette meg a Mozillához ka
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Ez a kísérlet nem támogatott az Ön nyelvén ({ $locale_code }).
+localeNotTranslatedWarningTitle = Ez a kísérlet még nem lett lefordítva az Ön nyelvére ({ $locale_code }.
 localeWarningSubtitle = Attól még bekapcsolhatja, ha szeretné.
 
 

@@ -171,9 +171,11 @@ news_updates:
   -
     slug: min-vid-update-1
     title: My Update title
-    link: https://blog.mozilla.org/testpilot/example
-    created: 2017-06-01T12:00:00Z
-    published: 2017-06-02T12:00:00Z
+    link: 'https://blog.mozilla.org/testpilot/example'
+    created: '2017-06-01T12:00:00Z'
+    published: '2017-06-02T12:00:00Z'
+    image: 'images/link/to/image.jpg' # optional
+    major: true # optional
     dev: false
     content: >
       Example content goes here
@@ -181,6 +183,17 @@ news_updates:
 see also:[General news updates](#general-news-updates)
 
 ![Example use of news_updates](img/news_update.png)
+
+## `video_url`
+
+If there's a youtube video for the experiment use this field. Note that this should be the embed URL
+rather than the sharing url
+
+```yaml
+video_url: 'video_url: https://www.youtube.com/embed/lDv68xYHFXM'
+```
+
+![Example share on embed code](img/embed_url.png)
 
 ## `image_twitter`
 
@@ -467,22 +480,14 @@ pre_feedback_copy: >
 
 ![Example pre-feedback prompt](img/pre-feedback.png)
 
-## `graduation_report`
+## `graduation_url`
 
-When an experiment graduates, the following replaces the introduction and detail images sections on the experiment details page.
+When an experiment graduates, a link to the provided graduation_url will be shown on the experiment details page.
 
-Should be wrapped in html tags. [While not yet localized, we may retain a l10n agency to localize as needed](https://github.com/mozilla/testpilot/issues/1829).
-Generally optional, but required before the experiment graduates.
+If an experiment has graduated but no graduation_url is provided, a message is shown stating that a graduation report is coming soon.
 
 ```yaml
-graduation_report: >
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam atque accusamus,
-    suscipit, nam commodi excepturi error modi.</p>
-    <ul>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam atque accusamus,
-      suscipit, nam commodi excepturi error modi. Laborum eum, quae, alias facere,
-      cupiditate vitae praesentium eveniet unde totam, architecto molestiae?</li>
-  </ul>
+graduation_url: http://example.com/graduation-report
 ```
 
 ## `eol_warning`
@@ -591,11 +596,12 @@ the experiment updates.
    slug: general-update-1
    title: Example title
    link: https://blog.mozilla.org/testpilot/example
-   created: 2017-06-01T12:00:00Z
-   published: 2017-06-02T12:00:00Z
-   dev: false
+   created: '2017-06-01T12:00:00Z'
+   published: '2017-06-02T12:00:00Z'
+   image: 'images/link/to/image.jpg' # optional
+   major: true # optional
    content: >
      Example content goes here
 ```
 
-!(Example general news update)[img/general_news_update.png]
+![Example general news update](img/general_news_update.png)

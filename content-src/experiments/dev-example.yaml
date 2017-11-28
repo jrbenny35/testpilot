@@ -2,13 +2,13 @@ dev: true
 id: 999
 title: 'Dev Example'
 slug: dev-example
+platforms: ['addon']
 thumbnail: /static/images/check.png
 description: >
   This is an example experiment that you should never see in production.
 introduction: >
   <p>Do you like Test Pilot experiments? Well, this one should exercise all the
   features of the site. You should never see it on production!</p>
-  <p><iframe width="560" height="315" src="https://www.youtube.com/embed/lDv68xYHFXM" frameborder="0" allowfullscreen></iframe></p>
   <ul>
     <li><strong>Markup in introduction:</strong> Look at this HTML list!</li>
     <li><strong>Hidden from production:</strong> If you see this on production
@@ -19,6 +19,7 @@ introduction: >
   </ul>
 image_twitter: /static/images/experiments/min-vid/social/mv-twitter.jpg
 image_facebook: /static/images/experiments/min-vid/social/mv-facebook.jpg
+video_url: https://www.youtube.com/embed/lDv68xYHFXM
 changelog_url: 'https://github.com/meandavejustice/min-vid/blob/master/CHANGELOG.md'
 contribute_url: 'https://github.com/meandavejustice/min-vid'
 bug_report_url: 'https://github.com/meandavejustice/min-vid/issues'
@@ -76,10 +77,7 @@ contributors:
     display_name: 'Jen Kagan'
     title: 'Engineering Intern'
     avatar: /static/images/experiments/min-vid/avatars/jen-kagan.jpg
-installation_count: 1
 created: '2016-09-22T00:07:28.847430Z'
-completed: '2016-11-16T20:15:00Z'
-uninstalled: '2017-02-05T00:00:00Z'
 order: 999
 testpilot_options:
   ratings: disabled

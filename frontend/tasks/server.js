@@ -32,14 +32,12 @@ const serverOptions = {
         req.url = url.format(parsed);
       }
 
+      if (pathname.indexOf('.json') !== -1) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+      }
+
       // Skip CSP for storybook
       if (pathname.indexOf('.storybook') !== -1) { return next(); }
-
-      // Rewrite /static/addon/latest to /static/addon/addon.xpi
-      if (pathname === '/static/addon/latest') {
-        parsed.pathname = '/static/addon/addon.xpi';
-        req.url = url.format(parsed);
-      }
 
       res.setHeader('content-security-policy', CSP);
       next();

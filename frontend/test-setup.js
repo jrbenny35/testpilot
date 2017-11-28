@@ -1,5 +1,13 @@
 // Global setup for all tests
 
+var Enzyme = require('enzyme');
+var Adapter = require('enzyme-adapter-react-16');
+
+Enzyme.configure({ adapter: new Adapter() });
+
+// HACK: Ignore non-JS imports used for asset dependencies in Webpack
+require.extensions['.scss'] = function () {}
+
 // We need jsdom for enzyme mount()'ed components - mainly the sticky header
 // scroll handler stuff on the experiments page.
 

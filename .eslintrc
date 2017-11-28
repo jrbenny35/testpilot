@@ -34,6 +34,8 @@ rules:
   comma-dangle: [2, never]
   indent: [2, 2, {SwitchCase: 1}]
   max-len: [0]
+  one-var: off
+  one-var-declaration-per-line: off
   no-console: 1
   no-multi-spaces: [0]
   no-param-reassign: [0]
@@ -42,3 +44,10 @@ rules:
   no-use-before-define: [2, nofunc]
   yoda: [0]
   linebreak-style: [0]
+  "import/no-extraneous-dependencies":
+    - error
+    -
+      devDependencies:
+        - '**/tests.js'
+        - '**/stories.{js,jsx}'
+        - "./frontend/{stories,tasks,tests}/**/*.{js,jsx}"

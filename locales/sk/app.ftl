@@ -17,6 +17,7 @@ footerLinkCookies = Cookies
 footerLinkPrivacy = Súkromie
 footerLinkTerms = Podmienky používania
 footerLinkLegal = Právne informácie
+footerLinkFeedback = Poskytnúť spätnú väzbu
 footerLinkAbout = O projekte Test Pilot
 
 
@@ -29,6 +30,7 @@ menuWiki = Test Pilot Wiki
 menuDiscuss = Diskusia o Test Pilote
 menuFileIssue = Nahlásiť chybu
 menuRetire = Odinštalovať Test Pilot
+headerLinkBlog = Blog
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = Ale nie!
 [[ updateList ]]
 
 latestUpdatesTitle = Najnovšie aktualizácie
+showMoreNewsTitle = Zobraziť predchádzajúce novinky
 
 
 // A listing of all Test Pilot experiments.
@@ -159,7 +162,6 @@ experimentPromoSubheader = Tvoríme funkcie novej generácie pre Firefox. Nainš
 
 isEnabledStatusMessage = Experiment { $title } je aktivovaný!
 installErrorMessage = Ojoj. Experiment { $title } nemohol byť aktivovaný. Skúste to znova neskôr.
-participantCount = <span>{ $installation_count }</span> používateľov
 otherExperiments = Vyskúšajte aj tieto experimenty
 giveFeedback = Poskytnúť spätnú väzbu
 disableHeader = Ukončiť experiment?
@@ -181,17 +183,33 @@ bugReports = Nahláste chybu
 discussExperiment = Diskutujte o { $title }
 tourOnboardingTitle = Experiment { $title } je aktivovaný!
 tourDoneButton = Hotovo
-userCountContainer = Experiment { $title } práve testuje <span>{ $installation_count }</span> ľudí!
 userCountContainerAlt = Práve spustený!
 highlightPrivacy = Vaše súkromie
+experimentGradReportButton = Správa o ukončení experimentu
 experimentGradReportPendingTitle = Tento experiment bol ukončený
 experimentGradReportPendingCopy = Pracujeme na správe. Podrobnosti sa dozviete čoskoro.
+experimentGradReportReady = Pripravili sme správu o ukončení experimentu.
 experimentGoToLink = Prejsť na experiment { $title }
+startedDateLabel = Dátum začiatku experimentu: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Test Pilot
+learnMoreLink = ĎALŠIE INFORMÁCIE
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
 [[ experimentPlatform ]]
 
+experimentPlatformWebAddonMobile = Experiment pre Firefox, web a mobilné zariadenia
+experimentPlatformWebAddon = Experiment pre Firefox a web
+experimentPlatformWebMobile = Experiment pre web a mobilné zariadenia
+experimentPlatformAddonMobile = Experiment pre Firefox a mobilné zariadenia
+experimentPlatformWeb = Experiment pre web
+experimentPlatformAddon = Experiment pre Firefox
+experimentPlatformMobileApp = Experiment pre mobilné zariadenia
 
 
 // Shown when an experiment requires a version of Firefox newer than the user's.
@@ -207,7 +225,7 @@ versionChangeNoticeLink = Prevezmite si najnovšiu verziu Firefoxu.
 [[ uninstall ]]
 
 retireDialogTitle = Odinštalovať Test Pilot?
-retireMessage = Ako si želáte. Všetky vaše aktívne testy budú ukončené, doplnok sa odinštaluje a údaje o vašom účte sa budú odstránené z našich serverov.
+retireMessageUpdate = Ako si želáte. Test Pilot bude odinštalovaný. Jednotlivé experimenty môžete odinštalovať pomocou Správcu doplnkov vo Firefoxe.
 retireEmailMessage = Ak chcete e-mailové správy od nás vypnúť, stačí ak kliknete na odkaz <em>unsubscribe</em> v ktoromkoľvek e-maile z projektu Test Pilot.
 retireSubmitButton = Pokračovať
 pageTitleRetirePage = Firefox Test Pilot - Odinštalovanie
@@ -272,7 +290,7 @@ newsletterFooterSuccessBody = Ak ste v minulosti nepotvrdili odber noviniek Mozi
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Experiment nie je dostupný vo vašom jazyku ({ $locale_code }).
+localeNotTranslatedWarningTitle = Tento experiment nebol preložený do vášho jazyka ({ $locale_code }).
 localeWarningSubtitle = To vám však nebráni ho aktivovať.
 
 

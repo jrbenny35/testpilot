@@ -17,6 +17,7 @@ footerLinkCookies = Cookies
 footerLinkPrivacy = Privacidade
 footerLinkTerms = Termos
 footerLinkLegal = Legal
+footerLinkFeedback = Dar feedback
 footerLinkAbout = Acerca do Test Pilot
 
 
@@ -27,8 +28,9 @@ home = Página inicial
 menuTitle = Definições
 menuWiki = Wiki do Test Pilot
 menuDiscuss = Discutir o Test Pilot
-menuFileIssue = Submeta um issue
+menuFileIssue = Submeter um issue
 menuRetire = Desinstalar o Test Pilot
+headerLinkBlog = Blogue
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = Oh não!
 [[ updateList ]]
 
 latestUpdatesTitle = Atualizações mais recentes
+showMoreNewsTitle = Mostrar notícias passadas
 
 
 // A listing of all Test Pilot experiments.
@@ -126,7 +129,7 @@ experimentListHeader = Escolha as suas experiências!
 experimentCardFeedback = Feedback
 experimentCardManage = Gerir
 experimentCardGetStarted = Começar
-experimentCardLearnMore = Saiba mais
+experimentCardLearnMore = Saber mais
 
 
 // A modal prompt shown when a user disables an experiment.
@@ -159,7 +162,6 @@ experimentPromoSubheader = Estamos a construir funcionalidades de última geraç
 
 isEnabledStatusMessage = { $title } está ativado.
 installErrorMessage = Uh oh. { $title } não pôde ser ativado. Tente novamente mais tarde.
-participantCount = <span>{ $installation_count }</span> participantes
 otherExperiments = Experimente estas experiências também
 giveFeedback = Dê feedback
 disableHeader = Desativar experiência?
@@ -176,17 +178,26 @@ contributorsExtraLearnMore = Saber mais
 changelog = Registo de alterações
 tour = Visita guiada
 tourLink = Iniciar visita guiada
-contribute = Contribuir
+contribute = Contribua
 bugReports = Relatórios de bugs
 discussExperiment = Discuta o { $title }
 tourOnboardingTitle = { $title } ativado!
 tourDoneButton = Feito
-userCountContainer = Estão <span>{ $installation_count }</span> pessoas a experimentar o { $title } neste momento!
 userCountContainerAlt = Acaba de ser lançado!
 highlightPrivacy = A sua privacidade
+experimentGradReportButton = Relatório de graduação
 experimentGradReportPendingTitle = Esta experiência terminou
 experimentGradReportPendingCopy = Estamos a trabalhar num relatório completo. Volte em breve para ver os detalhes.
+experimentGradReportReady = Preparámos um relatório de graduação completo.
 experimentGoToLink = Ir para { $title }
+startedDateLabel = Data de início da experiência: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Piloto de testes
+learnMoreLink = Saber mais
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -214,7 +225,7 @@ versionChangeNoticeLink = Obter a versão mais recente do Firefox.
 [[ uninstall ]]
 
 retireDialogTitle = Desinstalar o Test Pilot?
-retireMessage = Como desejar. Isto vai desativar quaisquer testes ativos, desinstalar o extra e remover as informações da sua conta dos nossos servidores.
+retireMessageUpdate = Como queira. Isto irá desinstalar o Test Pilot. Pode desativar experiências específicas a partir do Gestor de extras do Firefox.
 retireEmailMessage = Para deixar de receber atualizações por email, basta clicar na ligação <em>cancelar subscrição</em> em qualquer email do Test Pilot.
 retireSubmitButton = Proceder
 pageTitleRetirePage = Firefox Test Pilot - Desinstalar o Test Pilot
@@ -259,10 +270,10 @@ incompatibleSubheader = Recomendamos <a>desativar estes extras</a> antes de ativ
 
 newsletterFormEmailPlaceholder
     .placeholder = O seu email aqui
-newsletterFormDisclaimer = Apenas lhe iremos enviar informação relacionada sobre o Test Pilot.
+newsletterFormDisclaimer = Apenas lhe iremos enviar informação relacionada com o Test Pilot.
 newsletterFormPrivacyNotice = Concordo que a Mozilla faça a gestão da minha informação tal como explicado <a>nesta política de privacidade</a>.
 newsletterFormPrivacyAgreementRequired = Por favor marque esta caixa se deseja proceder.
-newsletterFormSubmitButton = Registe-se agora
+newsletterFormSubmitButton = Registar-se agora
 newsletterFormSubmitButtonSubmitting = A submeter...
 
 
@@ -270,8 +281,8 @@ newsletterFormSubmitButtonSubmitting = A submeter...
 [[ newsletterFooter ]]
 
 newsletterFooterError = Houve um erro ao submeter o seu endereço de email. Tentar novamente?
-newsletterFooterHeader = Mantenha-se informado
-newsletterFooterBody = Descubra sobre as novas experiências e veja os resultados dos testes para experiências que experimentou.
+newsletterFooterHeader = Mantenha-se informado(a)
+newsletterFooterBody = Descubra acerca de novas experiências e veja resultados de testes para experiências que experimentou.
 newsletterFooterSuccessHeader = Obrigado!
 newsletterFooterSuccessBody = Se não confirmou previamente uma subscrição para um newsletter relacionado com a Mozilla poderá ter de o fazer. Por favor verifique a sua caixa de entrada ou filtro de spam por um email nosso.
 
@@ -279,7 +290,7 @@ newsletterFooterSuccessBody = Se não confirmou previamente uma subscrição par
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Esta experiência não é suportada no seu idioma ({ $locale_code }).
+localeNotTranslatedWarningTitle = Esta experiência não foi traduzida para o seu idioma ({ $locale_code }).
 localeWarningSubtitle = Ainda pode ativá-la se desejar.
 
 

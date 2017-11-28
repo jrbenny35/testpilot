@@ -17,6 +17,7 @@ footerLinkCookies = Kakor
 footerLinkPrivacy = Sekretesspolicy
 footerLinkTerms = Villkor
 footerLinkLegal = Juridisk information
+footerLinkFeedback = Ge återkoppling
 footerLinkAbout = Om Test Pilot
 
 
@@ -29,6 +30,7 @@ menuWiki = Wiki för Test Pilot
 menuDiscuss = Diskutera Test Pilot
 menuFileIssue = Rapportera ett problem
 menuRetire = Avinstallera Test Pilot
+headerLinkBlog = Blogg
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = Åh nej!
 [[ updateList ]]
 
 latestUpdatesTitle = Senast uppdaterade
+showMoreNewsTitle = Visa äldre nyheter
 
 
 // A listing of all Test Pilot experiments.
@@ -159,7 +162,6 @@ experimentPromoSubheader = Vi bygger nästa generations funktioner för Firefox.
 
 isEnabledStatusMessage = { $title } är aktiverad.
 installErrorMessage = Hoppsan. { $title } kunde inte aktiveras. Försök igen senare.
-participantCount = <span>{ $installation_count }</span> deltagare
 otherExperiments = Prova dessa experiment också
 giveFeedback = Ge återkoppling
 disableHeader = Inaktivera experiment?
@@ -181,12 +183,21 @@ bugReports = Felrapporter
 discussExperiment = Diskutera { $title }
 tourOnboardingTitle = { $title } är aktiverad!
 tourDoneButton = Klar
-userCountContainer = Det finns <span>{ $installation_count }</span> personer som provar { $title } just nu!
 userCountContainerAlt = Nyligen startad!
 highlightPrivacy = Din sekretesspolicy
+experimentGradReportButton = Examensrapport
 experimentGradReportPendingTitle = Detta experiment har upphört
 experimentGradReportPendingCopy = Vi arbetar med en fullständig rapport. Återkom snart för detaljer.
+experimentGradReportReady = Vi har utarbetat en fullständig examinationsrapport.
 experimentGoToLink = Gå till { $title }
+startedDateLabel = Startdatum för experiment: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Test Pilot
+learnMoreLink = LÄS MER
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -214,7 +225,7 @@ versionChangeNoticeLink = Hämta den aktuella versionen av Firefox.
 [[ uninstall ]]
 
 retireDialogTitle = Avinstallera Test Pilot?
-retireMessage = Som du önskar. Detta kommer att inaktivera alla aktiva tester, avinstallera tillägget och ta bort din kontoinformation från våra servrar.
+retireMessageUpdate = Som du vill. Detta avinstallerar Test Pilot. Du kan inaktivera enskilda experiment från tilläggshanteraren i Firefox.
 retireEmailMessage = För att välja bort e-postuppdateringar, klicka på länken <em>avbryt prenumeration</em> på någon Test Pilot e-post.
 retireSubmitButton = Fortsätt
 pageTitleRetirePage = Firefox Test Pilot - Avinstallera Test Pilot
@@ -279,7 +290,7 @@ newsletterFooterSuccessBody = Om du tidigare inte har bekräftat en prenumeratio
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Detta experiment stöds inte på ditt språk ({ $locale_code }).
+localeNotTranslatedWarningTitle = Detta experiment har inte översatts till ditt språk ({ $locale_code }).
 localeWarningSubtitle = Du kan fortfarande aktivera det om du vill.
 
 

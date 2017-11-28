@@ -17,6 +17,7 @@ footerLinkCookies = Cookies
 footerLinkPrivacy = Soukromí
 footerLinkTerms = Podmínky
 footerLinkLegal = Právní informace
+footerLinkFeedback = Zpětná vazba
 footerLinkAbout = O programu Test Pilot
 
 
@@ -29,6 +30,7 @@ menuWiki = Wiki Test Pilot
 menuDiscuss = Diskutovat o Test Pilot
 menuFileIssue = Nahlásit chybu
 menuRetire = Odinstalovat Test Pilot
+headerLinkBlog = Blog
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = Ale ne!
 [[ updateList ]]
 
 latestUpdatesTitle = Poslední aktualizace
+showMoreNewsTitle = Ukázat starší zprávy
 
 
 // A listing of all Test Pilot experiments.
@@ -159,7 +162,6 @@ experimentPromoSubheader = Vytváříme funkce pro Firefox nové generace. Nains
 
 isEnabledStatusMessage = { $title } je zapnut.
 installErrorMessage = Jejda. { $title } nelze zapnout. Zkuste to znovu později.
-participantCount = <span>{ $installation_count }</span> účastníků
 otherExperiments = Vyzkoušejte také tyto experimenty
 giveFeedback = Poskytnout zpětnou vazbu
 disableHeader = Vypnout experiment?
@@ -173,19 +175,41 @@ measurements = Vaše soukromí
 experimentPrivacyNotice = Další informace o shromažďování dat pro { $title } můžete najít zde.
 contributorsHeading = Tento experiment přináší
 contributorsExtraLearnMore = Zjistit více
-changelog = seznam změn
+changelog = Seznam změn
 tour = Průvodce
-tourLink = prohlídka
+tourLink = Prohlídka
 contribute = Přispět
 bugReports = Hlášení chyb
 discussExperiment = DIskutujte o experimentu { $title }
 tourOnboardingTitle = Experiment { $title } zapnut!
 tourDoneButton = Hotovo
-userCountContainer = Experiment { $title } zkouší <span>{ $installation_count }</span> lidí!
 userCountContainerAlt = Právě spuštěno!
 highlightPrivacy = Vaše soukromí
+experimentGradReportButton = Zpráva o ukončení experimentu
 experimentGradReportPendingTitle = Tento experiment byl ukončen
 experimentGradReportPendingCopy = Pracujeme na kompletní zprávě o výsledcích. Podrobnosti doplníme brzy.
+experimentGradReportReady = Připravili jsme zprávu o ukončení experimentu.
+experimentGoToLink = Přejít na { $title }
+startedDateLabel = Datum začátku experimentu: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Test Pilot
+learnMoreLink = ZJISTIT VÍCE
+
+
+// Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
+[[ experimentPlatform ]]
+
+experimentPlatformWebAddonMobile = Experiment pro Firefox, web i mobily
+experimentPlatformWebAddon = Experiment pro Firefox a web
+experimentPlatformWebMobile = Experiment pro web a mobily
+experimentPlatformAddonMobile = Experiment pro Firefox a mobily
+experimentPlatformWeb = Experiment pro web
+experimentPlatformAddon = Experiment pro Firefox
+experimentPlatformMobileApp = Experiment pro mobily
 
 
 // Shown when an experiment requires a version of Firefox newer than the user's.
@@ -201,7 +225,7 @@ versionChangeNoticeLink = Získejte aktuální verzi Firefoxu.
 [[ uninstall ]]
 
 retireDialogTitle = Odinstalovat Test Pilot?
-retireMessage = Jak si přejete. Toto zakáže všechny aktivní testy, odinstaluje doplněk a odstraní informace o vašem účtu z našich serverů.
+retireMessageUpdate = Jak si přejete, Test Pilot odinstalujeme. Jednotlivé experimenty můžete zakázat ve Firefoxu ve správci doplňků.
 retireEmailMessage = Pro odhlášení ze zasílání informací klepněte na odkaz <em>unsubscribe</em> v kterémkoliv e-mailu zaslaném Test Pilotem.
 retireSubmitButton = Pokračovat
 pageTitleRetirePage = Firefox Test Pilot - Odinstalovat Test Pilot
@@ -266,7 +290,7 @@ newsletterFooterSuccessBody = Pokud jste dříve nepotvrdili odběr zpravodaje M
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Tento experiment není ve vašem jazyce ({ $locale_code }) podporován.
+localeNotTranslatedWarningTitle = Tento experiment nebyl přeložen do vašeho jazyka ({ $locale_code }).
 localeWarningSubtitle = Můžete ale aktivaci zkusit i bez toho.
 
 

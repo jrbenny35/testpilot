@@ -76,14 +76,7 @@ pre_feedback_copy: >
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam atque accusamus,
     suscipit, nam commodi excepturi error modi.</p>
 
-graduation_report: >
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam atque accusamus,
-    suscipit, nam commodi excepturi error modi.</p>
-    <ul>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam atque accusamus,
-      suscipit, nam commodi excepturi error modi. Laborum eum, quae, alias facere,
-      cupiditate vitae praesentium eveniet unde totam, architecto molestiae?</li>
-  </ul>
+graduation_url: 'http://example.com/graduation-report'
 
 eol_warning: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
 min_release: 99
@@ -104,11 +97,12 @@ testpilot_options:
 
 news_updates:
   -
-    slug: min-vid-update-1
+    slug: testpilot-update-1
     title: My Update title
-    link: https://blog.mozilla.org/testpilot/example
-    created: 2017-06-01T12:00:00Z
-    published: 2017-06-02T12:00:00Z
-    dev: false
+    link: 'https://blog.mozilla.org/testpilot/example'
+    created: '2017-06-01T12:00:00Z'
+    published: '2017-06-02T12:00:00Z'
+    image: 'images/link/to/image.jpg' # optional
+    major: true # optional
     content: >
       Example content goes here

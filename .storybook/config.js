@@ -1,10 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import 'l20n';
 
 import { configure } from '@storybook/react';
 
+import '../frontend/build/static/styles/experiments.css';
+import '../frontend/build/static/styles/main.css';
+
+const reqInSrcTree = require.context('../frontend/src/app', true, /\/stories.jsx?$/);
+
 function loadStories() {
-  require('../stories');
+  reqInSrcTree.keys().forEach((filename) => reqInSrcTree(filename));
 }
 
 configure(loadStories, module);

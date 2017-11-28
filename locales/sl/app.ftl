@@ -17,6 +17,7 @@ footerLinkCookies = Piškotki
 footerLinkPrivacy = Zasebnost
 footerLinkTerms = Pogoji
 footerLinkLegal = Pravne informacije
+footerLinkFeedback = Sporočite povratne informacije
 footerLinkAbout = O programu Test Pilot
 
 
@@ -29,6 +30,7 @@ menuWiki = Test Pilot Wiki
 menuDiscuss = Razprava o programu Test Pilot
 menuFileIssue = Prijavite težavo
 menuRetire = Odstrani Test Pilot
+headerLinkBlog = Blog
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = O, ne!
 [[ updateList ]]
 
 latestUpdatesTitle = Najnovejše posodobitve
+showMoreNewsTitle = Prikaži pretekle novice
 
 
 // A listing of all Test Pilot experiments.
@@ -159,7 +162,6 @@ experimentPromoSubheader = Razvijamo funkcije za novo generacijo Firefoxa. Names
 
 isEnabledStatusMessage = { $title } je omogočen.
 installErrorMessage = Ojej. Poskusa { $title } ni mogoče omogočiti. Poskusite znova pozneje.
-participantCount = <span>{ $installation_count }</span> uporabnikov
 otherExperiments = Preskusite tudi te poskuse
 giveFeedback = Sporočite povratne informacije
 disableHeader = Onemogoči poskus?
@@ -181,12 +183,21 @@ bugReports = Poročila o napakah
 discussExperiment = Pogovor o { $title }
 tourOnboardingTitle = { $title } omogočen!
 tourDoneButton = Končano
-userCountContainer = { $title } v tem trenutku preskuša <span>{ $installation_count }</span> ljudi!
 userCountContainerAlt = Pravkar izdan!
 highlightPrivacy = Vaša zasebnost
+experimentGradReportButton = Poročilo o zaključku
 experimentGradReportPendingTitle = Ta poskus se je končal
 experimentGradReportPendingCopy = Pripravljamo popolno poročilo. Podrobnosti bodo kmalu na voljo.
+experimentGradReportReady = Pripravili smo celotno poročilo o zaključku.
 experimentGoToLink = Pojdi na { $title }
+startedDateLabel = Datum začetka poskusa: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Test Pilot
+learnMoreLink = VEČ O TEM
 
 
 // Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
@@ -196,7 +207,7 @@ experimentPlatformWebAddonMobile = Poskus za Firefox / splet / mobilno aplikacij
 experimentPlatformWebAddon = Poskus za Firefox / splet
 experimentPlatformWebMobile = Pokus za splet / mobilno aplikacijo
 experimentPlatformAddonMobile = Poksus za Firefox / mobilno aplikacijo
-experimentPlatformWeb = poskus za splet
+experimentPlatformWeb = Poskus za splet
 experimentPlatformAddon = Poskus za Firefox
 experimentPlatformMobileApp = Poskus za mobilno aplikacijo
 
@@ -214,7 +225,7 @@ versionChangeNoticeLink = Prenesite najnovejšo različico Firefoxa.
 [[ uninstall ]]
 
 retireDialogTitle = Želite odstraniti Test Pilot?
-retireMessage = Kot želite. S tem boste onemogočili vse aktivne poskuse, odstranili dodatek in izbrisali podatke računa z naših strežnikov.
+retireMessageUpdate = Kot želite. S tem boste odstranili Test Pilot. Posamezne poskuse lahko odstranite v Firefoxovem upravitelju dodatkov.
 retireEmailMessage = Za odjavo od e-poštnih novic kliknite povezavo <em>Odjava</em> v kateremkoli od sporočil programa Test Pilot.
 retireSubmitButton = Nadaljuj
 pageTitleRetirePage = Firefox Test Pilot - odstranjevanje
@@ -279,7 +290,7 @@ newsletterFooterSuccessBody = Če še niste potrdili naročila na prejemanje Moz
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Ta poskus ni podprt v vašem jeziku ({ $locale_code }).
+localeNotTranslatedWarningTitle = Ta poskus ni bil preveden v vaš jezik ({ $locale_code }).
 localeWarningSubtitle = Če želite, ga lahko kljub temu omogočite.
 
 

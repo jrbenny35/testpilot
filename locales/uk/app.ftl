@@ -97,8 +97,8 @@ notFoundHeader = Чотириста чотири!
 emailOptInDialogTitle = Вітаємо у Test Pilot!
 emailOptInMessage = Дізнайтеся про нові експерименти та перегляньте результати експериментів, якими ви користувалися.
 emailOptInConfirmationTitle = Повідомлення надіслано
-emailOptInSuccessMessage2 = Дякуємо!
 emailOptInConfirmationClose = Вперед до експериментів...
+emailOptInDialogErrorTitle = О ні!
 
 
 // news feed updates.
@@ -122,6 +122,8 @@ experimentListHeader = Оберіть свої експерименти!
 // An individual experiment in the listing of all Test Pilot experiments.
 [[ experimentCard ]]
 
+// Small button on experiment card that links to a survey for feedback submission
+experimentCardFeedback = Відгук
 experimentCardManage = Керувати
 experimentCardGetStarted = Розпочати
 experimentCardLearnMore = Докладніше
@@ -182,6 +184,21 @@ tourDoneButton = Готово
 userCountContainer = <span>{ $installation_count }</span> людей пробують { $title } прямо зараз!
 userCountContainerAlt = Щойно запущено!
 highlightPrivacy = Ваша приватність
+experimentGradReportPendingTitle = Цей експеримент закінчився
+experimentGradReportPendingCopy = Ми працюємо над повним звітом. Загляньте пізніше, щоб дізнатися деталі.
+experimentGoToLink = Перейти до { $title }
+
+
+// Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
+[[ experimentPlatform ]]
+
+experimentPlatformWebAddonMobile = Експеримент для Firefox / Інтернету / мобільного пристрою
+experimentPlatformWebAddon = Експеримент для Firefox / Інтернету
+experimentPlatformWebMobile = Експеримент для Інтернету / мобільного пристрою
+experimentPlatformAddonMobile = Експеримент для Firefox / мобільного пристрою
+experimentPlatformWeb = Експеримент для Інтернету
+experimentPlatformAddon = Експеримент для Firefox
+experimentPlatformMobileApp = Експеримент для мобільного пристрою
 
 
 // Shown when an experiment requires a version of Firefox newer than the user's.
@@ -293,6 +310,12 @@ hidePastExperiments = Приховати минулі експерименти
 [[ warnings ]]
 
 warningGenericTitle = Щось не так!
+warningGenericDetail = З Test Pilot щось пішло не так Будь ласка, <a>повідомте про помилку</a> та вкажіть цей текст помилки.
 warningUpgradeFirefoxTitle = Оновіть Firefox, щоб продовжити!
+warningUpgradeFirefoxDetail = Для роботи Test Pilot необхідно використовувати останню версію Firefox. Щоб почати, <a>оновіть Firefox</a>.
 warningHttpsRequiredTitle = Вимагається HTTPS!
 warningHttpsRequiredDetail = Test Pilot повиннен бути відкритий через HTTPS. Будь ласка, перегляньте <a>нашу документацію</a> для деталей.
+warningMissingPrefTitle = Розробляєте Test Pilot?
+warningMissingPrefDetail = Запускаючи Test Pilot локально або в середовищі розробки необхідно використовувати спеціальну конфігурацію. Для отримання більш детальної інформації, будь ласка, перегляньте <a>нашу документацію</a>.
+warningBadHostnameTitle = Неприйнятне ім'я хоста!
+warningBadHostnameDetail = Доступ до сайту Test Pilot можливий тільки з testpilot.firefox.com, testpilot.stage.mozaws.net, testpilot.dev.mozaws.net або example.com:8000. Для отримання більш детальної інформації, будь ласка, перегляньте <a>нашу документацію</a>.

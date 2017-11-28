@@ -17,6 +17,7 @@ footerLinkCookies = Куки
 footerLinkPrivacy = Приватность
 footerLinkTerms = Условия использования
 footerLinkLegal = Права
+footerLinkFeedback = Оставить отзыв
 footerLinkAbout = О программе лётчика-испытателя
 
 
@@ -29,6 +30,7 @@ menuWiki = Вики лётчика-испытателя
 menuDiscuss = Обсуждение лётчика-испытателя
 menuFileIssue = Сообщить о проблеме
 menuRetire = Удалить расширение лётчика-испытателя
+headerLinkBlog = Блог
 
 
 // The splash on the homepage.
@@ -105,6 +107,7 @@ emailOptInDialogErrorTitle = О, нет!
 [[ updateList ]]
 
 latestUpdatesTitle = Последние обновления
+showMoreNewsTitle = Показать прошлые новости
 
 
 // A listing of all Test Pilot experiments.
@@ -159,7 +162,6 @@ experimentPromoSubheader = Мы создаём новое поколение в�
 
 isEnabledStatusMessage = { $title } включено.
 installErrorMessage = О, нет. Не удалось включить { $title }. Попробуйте снова позже.
-participantCount = <span>{ $installation_count }</span> участников
 otherExperiments = Также попробуйте эти эксперименты
 giveFeedback = Оставить отзыв
 disableHeader = Отключить эксперимент?
@@ -181,11 +183,33 @@ bugReports = Сообщения об ошибках
 discussExperiment = Обсудить { $title }
 tourOnboardingTitle = { $title } включено!
 tourDoneButton = Готово
-userCountContainer = Прямо сейчас <span>{ $installation_count }</span> людей пробуют { $title }!
 userCountContainerAlt = Только что запущено!
 highlightPrivacy = Ваша приватность
+experimentGradReportButton = Отчёт о завершении
 experimentGradReportPendingTitle = Этот эксперимент завершён
 experimentGradReportPendingCopy = Мы работаем над полным отчётом. Загляните попозже, чтобы узнать подробности.
+experimentGradReportReady = Мы подготовили полный отчёт о результатах эксперимента.
+experimentGoToLink = Перейти к { $title }
+startedDateLabel = Дата начала эксперимента: <b>{ $startedDate }</b>
+
+
+// news updates dialog.
+[[ newsUpdatesDialog ]]
+
+nonExperimentDialogHeaderLink = Лётчик-испытатель
+learnMoreLink = ПОДРОБНЕЕ
+
+
+// Label shown next to a series of icons indicating whether an experiment is available as an add-on, mobile app, and/or web site
+[[ experimentPlatform ]]
+
+experimentPlatformWebAddonMobile = Эксперимент для Firefox / Интернета / мобильного устройства
+experimentPlatformWebAddon = Эксперимент для Firefox / Интернета
+experimentPlatformWebMobile = Эксперимент для Интернета / мобильного устройства
+experimentPlatformAddonMobile = Эксперимент для Firefox / мобильного устройства
+experimentPlatformWeb = Эксперимент для Интернета
+experimentPlatformAddon = Эксперимент для Firefox
+experimentPlatformMobileApp = Эксперимент для мобильного устройства
 
 
 // Shown when an experiment requires a version of Firefox newer than the user's.
@@ -201,7 +225,7 @@ versionChangeNoticeLink = Загрузить свежую версию Firefox.
 [[ uninstall ]]
 
 retireDialogTitle = Удалить дополнение лётчика-испытателя?
-retireMessage = Как вы пожелаете. Это действие отключит все активные тесты, удалит дополнение и информацию вашего аккаунта с наших серверов.
+retireMessageUpdate = Как пожелаете. Это действие удалит расширение лётчика-испытателя. Вы также можете отключить отдельные эксперименты из окна управления дополнениями Firefox.
 retireEmailMessage = Чтобы отказаться от получения рассылки, просто щёлкните <em>отписаться</em> в любом письме для лётчиков-испытателей.
 retireSubmitButton = Продолжить
 pageTitleRetirePage = Лётчик-испытатель Firefox - Удалить расширение лётчика-испытателя
@@ -266,7 +290,7 @@ newsletterFooterSuccessBody = Если вы ранее не подтвержда
 // A warning shown to users when the experiment is not available in their language
 [[ localeWarning ]]
 
-localeUnavailableWarningTitle = Этот эксперимент не поддерживат ваш язык ({ $locale_code }).
+localeNotTranslatedWarningTitle = Этот эксперимент не был переведён на ваш язык ({ $locale_code }).
 localeWarningSubtitle = Вы всё ещё можете включить его, если хотите.
 
 
